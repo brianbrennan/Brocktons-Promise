@@ -77,9 +77,19 @@ a {
 .topBar .logo {
   margin: 30px 0 15px 0;
 }
+.topBar .logo img {
+  width: 400px;
+}
+.topBar .people {
+  position: absolute;
+  right: 0;
+  margin-top: -70px;
+  z-index: -100;
+}
 
 .mainNav {
   background: #1b75bb;
+  z-index: 100;
 }
 .mainNav ul li {
   padding: 15px 8px;
@@ -100,6 +110,12 @@ a {
 }
 .mainNav ul li:hover {
   background: #62b5f5;
+}
+.mainNav ul li:hover + ul {
+  display: block;
+}
+.mainNav ul li ul {
+  display: none;
 }
 
 strong {
@@ -240,6 +256,17 @@ strong {
   padding-right: 5%;
 }
 
+.page {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 .mainFoot {
   padding: 30px 0;
   background: #414141;
@@ -295,7 +322,7 @@ strong {
   margin-top: 100px;
   line-height: 1.5;
   color: #1b75bb;
-  margin-left: -200px;
+  margin-left: -20px;
 }
 .side ul ul {
   margin-left: 30px;
@@ -312,5 +339,3 @@ strong {
 .side .steering a:hover {
   background: #d6edfe;
 }
-
-/*# sourceMappingURL=style.css.map */
